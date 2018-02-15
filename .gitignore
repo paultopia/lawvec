@@ -2,3 +2,5 @@ supcourt/
 .ipynb_checkpoints/
 texts/
 .DS_Store
+lawvec_first_try_vectors
+lawvec_first_try_vectors.vectors_ngrams.npy
