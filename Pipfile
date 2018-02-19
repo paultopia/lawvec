@@ -11,6 +11,7 @@ gensim = "*"
 ipykernel = "*"
 "beautifulsoup4" = "*"
 lxml = "*"
+nltk = "*"
 
 
 [requires]
