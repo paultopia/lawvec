@@ -29,7 +29,7 @@ def make_clean_gzip(inzip):
 zips = [x for x in glob.glob("zips/*") if os.path.isfile(x)]
 
 for z in zips:
-    make_clean_gzip(zips)
+    make_clean_gzip(z)
 
 with open("maxlength.txt", w) as ml:
     ml.write("max length = " + str(max_length))
