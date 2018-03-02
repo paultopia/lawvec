@@ -15,7 +15,8 @@ def clean_text(dirty_case):
     depunctuated = dirty_case.translate(transdict)
     desentenced = re.sub('\.\s+', " ", depunctuated) # idea is to try to keep most abbreviation periods (often not followed by spaces, esp. in legal text) and ditch sentence periods
     # I'm also assuming there's no unicode punctuation other than section symbols, paragraph symbols, etc.
-    return re.sub('\s+', " ", desentenced).lower()
+    desingled = " ".join([x for x in desentenced.split() if len(x) > 1])
+    return re.sub('\s+', " ", desingled).lower()
 
 def get_cleaned_text(opinion_from_courtlistener):
     if opinion_from_courtlistener["plain_text"]:
