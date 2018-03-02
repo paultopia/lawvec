@@ -2,7 +2,7 @@ from get_clean_text import get_cleaned_text
 import tarfile
 import json
 from io import BytesIO
-from pathlib import Path
+from pathlib import Path, PurePath
 import glob
 import os
 
@@ -10,7 +10,8 @@ max_length = 0
 
 def make_clean_gzip(inzip):
     global max_length
-    outzip = "extracted/clean-" + inzip
+    outname = PurePath(inzip).name
+    outzip = "extracted/clean-" + outname
     with tarfile.open(inzip, 'r:gz') as infile, tarfile.open(outzip, 'w:gz') as outfile:
         jfiles = infile.getnames()
         for j in jfiles:
