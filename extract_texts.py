@@ -16,7 +16,10 @@ def make_clean_gzip(inzip):
         jfiles = infile.getnames()
         for j in jfiles:
             dirtycase = json.loads(infile.extractfile(j).read().decode("utf-8"))
-            cleaned = get_cleaned_text(dirtycase)
+            try:
+                cleaned = get_cleaned_text(dirtycase)
+            except:
+                cleaned = " "
             caselength = len(cleaned)
             if caselength > max_length:
                 max_length = caselength
