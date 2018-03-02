@@ -7,4 +7,3 @@ lawvec_first_try_vectors.vectors_ngrams.npy
 __pycache__
 *.tar.gz
 *.txt
-zips/
