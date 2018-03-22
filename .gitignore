@@ -7,3 +7,5 @@ lawvec_first_try_vectors.vectors_ngrams.npy
 __pycache__
 *.tar.gz
 *.txt
+full_courtlistener_vectors
+full_courtlistener_vectors.vectors.npy
